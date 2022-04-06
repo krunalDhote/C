@@ -1,0 +1,18 @@
+ create database pr2;
+ use pr2;
+ create table student(sid int,name varchar(50),age int,phno int(12),address varchar(300));
+ ALTER TABLE student ADD PRIMARY KEY (sid);
+ALTER TABLE student modify name varchar(50) NOT NULL;
+ ALTER TABLE student ADD UNIQUE (BTno);
+describe student;    
+ ALTER TABLE student ALTER age SET DEFAULT 20;      
+ INSERT INTO student values(334,'Krunal G. Dhote',20,9307871334,"At Post Tembhurkheda Ta. Warud Dist. Amravati",89);
+ ALTER TABLE student MODIFY COLUMN phno varchar(12);
+ delete from student where sid = 334;
+INSERT INTO student values(334,'Krunal G. Dhote',20,9307871334,"At Post Tembhurkheda Ta. Warud Dist. Amravati",89);
+INSERT INTO student (sid,name,age,phno,address,BTno)  values (302,'Achal V. Kale',19,9373223047,"Amravati",02),(338,'Nikhil D. Kothe',22,9309823466,'Udapur',03);
+ INSERT INTO student (sid,name,age,address)  values (341,'PrajjwalWatane',22,"Amravati");  
+update student set name="Prajjwal G. Watane" where sid=341;
+update student set address="AMT",phno=919373223047 where name="Achal V. Kale";
+ DELETE FROM student where address="Amravati";
+select * from student where address="Akola";
